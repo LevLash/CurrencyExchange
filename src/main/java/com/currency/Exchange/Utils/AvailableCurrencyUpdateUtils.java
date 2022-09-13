@@ -26,8 +26,6 @@ public class AvailableCurrencyUpdateUtils {
         AvailableCurrenciesService.put(new JSONObject(response).getJSONObject("data").names());
 
         logger.info("The system received a list of available currencies and saved it to the database");
-
-        logger.info("Available currencies: " + AvailableCurrenciesService.getJSONArray().toString());
     }
 
 }
