@@ -17,7 +17,6 @@ public class AvailableCurrencyUpdateUtils {
     @Scheduled(fixedDelay = 86400000)
     public void getAvailableCurrencies() throws Exception {
 
-        //String url = "";
         String url = "https://api.currencyapi.com/v3/currencies?apikey="
                 + CurrencyRequestController.FREE_CURRENCY_API_KEY;
 
