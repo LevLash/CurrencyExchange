@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+}
+
+group = 'com.currency'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '18'
+archivesBaseName = 'Currency_exchange'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.json:json:20220320'
+	implementation 'junit:junit:4.12'
+	implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
